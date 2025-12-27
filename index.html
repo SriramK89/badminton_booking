@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Badminton Booking</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <h1>🏸 Badminton Booking</h1>
+    
+    <!-- Login -->
+    <button id="loginBtn">Login with Google</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+    
+    <!-- Poll Form -->
+    <div id="pollSection" style="display:none;">
+      <h2>Weekly Poll</h2>
+      <form id="voteForm">
+        <label>Choose Slot:</label>
+        <select id="slot">
+          <option>Wednesday Evening</option>
+          <option>Saturday Morning</option>
+          <option>Saturday Evening</option>
+          <option>Sunday Morning</option>
+          <option>Sunday Evening</option>
+        </select>
+        
+        <label>Locality:</label>
+        <select id="locality">
+          <option>Pallikaranai</option>
+          <option>Perungudi</option>
+        </select>
+        
+        <label>+1 Members:</label>
+        <input type="number" id="plusOne" min="0" value="0">
+        
+        <label>Share Cork Cost?</label>
+        <select id="cork">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        
+        <button type="submit">Submit / Update Vote</button>
+      </form>
+      
+      <h3>Current Votes</h3>
+      <ul id="voteList"></ul>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
